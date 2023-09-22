@@ -7,7 +7,7 @@ import {  PlusIcon } from "@heroicons/react/24/outline";
 
 
 export default async function Contas() {
-  const data = await getContas()
+  const data = await getConta()
 
   return (
     <>
