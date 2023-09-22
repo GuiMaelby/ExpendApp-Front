@@ -21,7 +21,7 @@ export async function create(formData){
     return {message: "ok"}
 }
 
-export async function getConta() {
+export async function getContas() {
     const resp = await fetch(url)
     return resp.json()
   }

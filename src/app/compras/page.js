@@ -2,12 +2,13 @@ import NavBar from "@/components/NavBar";
 import DataRow from "./DataRow";
 import Button from "@/components/Button";
 import {  PlusIcon } from "@heroicons/react/24/outline";
+import { getContas } from "@/actions/contas";
 
 
 
 
 export default async function Contas() {
-  const data = await getConta()
+  const data = await getContas()
 
   return (
     <>
@@ -19,6 +20,7 @@ export default async function Contas() {
           <Button icon={<PlusIcon className="h6 w-6"/>}
           href="/contas/form">adicionar compra</Button>
         </div>
+        
         <div id="data">
           {data.map(conta => <DataRow conta={conta} />)}
         </div>
