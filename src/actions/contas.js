@@ -5,8 +5,6 @@ import { revalidatePath } from "next/cache"
 const url = process.env.NEXT_PUBLIC_BASE_URL + "/contas"
 
 export async function create(formData){
-    "use server"
-
     const options = {
         method: "POST",
         body: JSON.stringify(Object.fromEntries(formData)),
@@ -23,7 +21,7 @@ export async function create(formData){
     return {message: "ok"}
 }
 
-export async function getContas() {
+export async function getConta() {
     const resp = await fetch(url)
     return resp.json()
   }
