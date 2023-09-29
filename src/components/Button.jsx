@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function Button({children, icon, variant="primary", type="link", ...props}){
     const styles = {
-        primary : "bg-pink-600 hover:bg-pink-800",
+        primary : "bg-lime-600 hover:bg-lime-800",
         secundary: "border-2 border-slate-400 hover:bg-slate-800" 
     }
 
