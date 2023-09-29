@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NavBar({ active }) {
     return (
-        <nav className="flex justify-between items-center bg-slate-900 p-6">
+        <nav className="flex justify-between items-center bg-emerald-950 p-6">
             <ul className="flex items-end gap-12 text-slate-500">
                 <li>
                     <Link href="/">
@@ -13,14 +13,15 @@ export default function NavBar({ active }) {
                 </li>
                 <li>
                     <Link className={active=="despesas" && "text-slate-100"} href="/despesas">
-                        compras
+                        Compras
                     </Link>
                 </li>
                 <li>
                     <Link className={active=="contas" && "text-slate-100"} href="/contas">
-                        saldo
+                        Saldo
                     </Link>
-                </li>                
+                </li>
+                
             </ul>
 
             <div className="h-12 w-12 rounded-full overflow-hidden">

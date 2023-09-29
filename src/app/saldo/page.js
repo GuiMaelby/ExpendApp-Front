@@ -6,7 +6,7 @@ export default function Saldo() {
     <>
       <NavBar active={"saldo"} />
 
-      <main className="bg-slate-900 m-12 p-4 rounded">
+      <main className="bg-emerald-950 m-12 p-4 rounded">
         <h2>Saldo</h2>
       </main>
     </>
