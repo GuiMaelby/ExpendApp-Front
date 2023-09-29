@@ -1,6 +1,7 @@
 "use server"
 
 import { revalidatePath } from "next/cache"
+import { cookies } from 'next/headers'
 
 const url = process.env.NEXT_PUBLIC_BASE_URL +  "/contas"
 
