@@ -64,7 +64,7 @@ export async function update(conta){
 
     const resp = await fetch(updateUrl, options)
 
-    if (resp.status !== 200) return {error: "Erro ao atualizar conta"}
+    if (resp.status !== 200) return {error: "Erro ao atualizar compra"}
 
     revalidatePath("/contas")
 }
