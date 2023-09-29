@@ -46,7 +46,7 @@ export default function DropMenu({ idConta }) {
 
     resp?.error ?
       error(resp.error) :
-      success("conta apagada com sucesso")
+      success("compra apagada com sucesso")
 
     handleClose()
   }

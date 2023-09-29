@@ -21,11 +21,6 @@ export default function NavBar({ active }) {
                         Saldo
                     </Link>
                 </li>
-                <li>
-                    <Link className={active=="categorias" && "text-slate-100"} href="/categorias">
-                        Limite
-                    </Link>
-                </li>
                 
             </ul>
 

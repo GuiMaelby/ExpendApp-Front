@@ -2,31 +2,32 @@
 
 import { revalidatePath } from "next/cache"
 
-const url = process.env.NEXT_PUBLIC_BASE_URL + "/contas"
+const url = process.env.NEXT_PUBLIC_BASE_URL +  "/contas"
 
 export async function create(formData){
     const options = {
         method: "POST",
         body: JSON.stringify(Object.fromEntries(formData)),
-        headers:{
-            "Content-type": "applicantion/json"
+        headers: {
+            "Content-Type": "application/json"
         }
     }
     const resp = await fetch(url, options)
     if (resp.status !== 201){
-        return {message: "Erro ao adicionar"}
+        return {message: "Erro ao cadastrar"}
     }
-
+    
     revalidatePath("/contas")
     return {message: "ok"}
+       
 }
 
 export async function getContas() {
     const resp = await fetch(url)
     return resp.json()
-  }
+}
 
-  export async function apagar(id){
+export async function apagar(id){
     const deleteUrl = url + "/" + id
 
     const options = {
@@ -63,7 +64,7 @@ export async function update(conta){
 
     const resp = await fetch(updateUrl, options)
 
-    if (resp.status !== 200) return {error: "Erro ao atualizar compra"}
+    if (resp.status !== 200) return {error: "Erro ao atualizar conta"}
 
     revalidatePath("/contas")
 }
