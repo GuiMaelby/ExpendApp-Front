@@ -35,7 +35,7 @@ export async function getContas() {
 
     const resp = await fetch(deleteUrl, options)
 
-    if (resp.status !== 204) return {error: "Erro ao apagar conta. "}
+    if (resp.status !== 204) return {error: "Erro ao apagar compra. "}
 
     revalidatePath("/contas")
 }
@@ -63,7 +63,7 @@ export async function update(conta){
 
     const resp = await fetch(updateUrl, options)
 
-    if (resp.status !== 200) return {error: "Erro ao atualizar conta"}
+    if (resp.status !== 200) return {error: "Erro ao atualizar compra"}
 
     revalidatePath("/contas")
 }

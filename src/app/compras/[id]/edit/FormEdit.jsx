@@ -30,7 +30,7 @@ export default function FormContaEdit({conta}) {
 
     return (
         <main className="bg-slate-900 mt-10 m-auto max-w-lg p-2 rounded">
-            <h2 className="text-2xl font-bold">Editar coompra</h2>
+            <h2 className="text-2xl font-bold">Editar compra</h2>
 
             <form action={onSubmit} className="p-4">
                 <InputText 

@@ -1,7 +1,7 @@
 import NavBar from "@/components/NavBar";
 
 
-export default function Categorias() {
+export default function Saldo() {
   return (
     <>
       <NavBar active={"categorias"} />
