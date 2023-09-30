@@ -6,11 +6,13 @@ import { cookies } from 'next/headers'
 const url = process.env.NEXT_PUBLIC_BASE_URL +  "/contas"
 
 export async function create(formData){
+    const token = cookies().get("expendapp_token")
     const options = {
         method: "POST",
         body: JSON.stringify(Object.fromEntries(formData)),
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token.value}`
         }
     }
     const resp = await fetch(url, options)
@@ -37,7 +39,7 @@ export async function apagar(id){
 
     const resp = await fetch(deleteUrl, options)
 
-    if (resp.status !== 204) return {error: "Erro ao apagar compra. "}
+    if (resp.status !== 204) return {error: "Erro ao apagar conta. "}
 
     revalidatePath("/contas")
 }
