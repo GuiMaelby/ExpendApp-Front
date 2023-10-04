@@ -40,8 +40,8 @@ export default function LoginPage(){
             <main className="flex flex-col items-center justify-center w-full">
                 <h1 className="text-5xl font-bold mb-5">ExpendApp</h1>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <InputText register={register} name="email" label="email" style={{ color: 'white' }}/>
-                    <InputText register={register} name="senha" label="senha" type="password" style={{ color: 'white' }}/>
+                    <InputText register={register} name="email" label="email"/>
+                    <InputText register={register} name="senha" label="senha" type="password"/>
                     <Button type="button">entrar</Button>
                 </form>
             </main>
