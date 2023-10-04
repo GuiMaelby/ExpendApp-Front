@@ -13,7 +13,7 @@ export default async function Contas() {
 
       <main className="bg-slate-900 m-12 p-4 rounded">
         <div className="flex justify-between items-center">
-          <h2 className="text-2xl font-bold">Compras</h2>
+          <h2 className="text-2xl font-bold">Contas</h2>
           <Button 
             icon={<PlusIcon className="h6 w-6" />}
             href="/contas/form"
